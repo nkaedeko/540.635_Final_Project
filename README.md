@@ -1,74 +1,75 @@
-# 540.635_Final_Project
-MechTherm Analytics
-
+# MechTherm Analytics
 A Python Toolkit for Automated Tensile, DMA, TGA, and DSC Data Analysis
 
-Overview
+---
 
-This toolkit provides a unified Python workflow for analyzing several types of materials characterization data used in polymer and soft-materials research.
-It automates calculations that are normally done manually in Excel and generates standardized, publication-quality plots.
+## Overview
+This toolkit provides a unified Python workflow for analyzing materials characterization data commonly used in polymer and soft-materials research. It automates calculations normally performed manually in Excel and generates clean, publication-style plots.
 
-The package supports four major characterization techniques:
+The package currently supports:
+- Tensile testing (Instron)
+- Dynamic Mechanical Analysis (DMA)
+- Thermogravimetric Analysis (TGA)
+- Differential Scanning Calorimetry (DSC)
 
-Tensile testing (Instron)
+---
 
-Dynamic Mechanical Analysis (DMA)
+## Features
 
-Thermogravimetric Analysis (TGA)
+### Tensile Analysis
+- Reads raw Instron `.txt` files  
+- Computes:
+  - Young’s modulus  
+  - Ultimate tensile strength (UTS)  
+  - Strain at break  
+  - Toughness  
+- Generates stress–strain curves
 
-Differential Scanning Calorimetry (DSC)
+### DMA Analysis
+- Imports E′, E″, and tan δ vs. temperature data  
+- Extracts:
+  - Glass transition temperature (Tg) from E′ onset and tan δ peak  
+  - Storage modulus at chosen temperatures  
+- Generates E′–temperature and tan δ–temperature plots
 
-The goal is to make data processing faster, reproducible, and consistent across experiments.
+### TGA Analysis
+- Converts mass to percent weight  
+- Computes derivative weight loss (DTG)  
+- Extracts:
+  - T5  
+  - T50  
+  - Tmax  
+- Generates TGA and DTG curves
 
-Features
-1. Tensile Analysis
+### DSC Analysis
+- Smooths and baseline-corrects heat-flow data  
+- Identifies Tg (onset or midpoint)  
+- Generates DSC thermograms
 
-Reads raw Instron text files
+---
 
-Computes:
-
-Young’s modulus (automatic linear-region fit)
-
-Ultimate tensile strength (UTS)
-
-Strain at break
-
-Toughness
-
-Generates stress–strain curves for single or multiple samples
-
-2. DMA Analysis
-
-Imports E′, E″, and tan δ data
-
-Extracts:
-
-Glass transition temperature from E′ and tan δ
-
-Storage modulus at selected temperatures (e.g., 25 °C)
-
-Produces E′–T and tan δ–T plots
-
-3. TGA Analysis
-
-Converts mass to % weight
-
-Computes derivative weight loss (DTG)
-
-Determines:
-
-T₅ (5% weight loss)
-
-T₅₀
-
-Tmax (DTG peak position)
-
-Outputs TGA + DTG curves
-
-4. DSC Analysis
-
-Smooths and baseline-corrects heat-flow data
-
-Identifies Tg (onset or midpoint)
-
-Generates clean DSC thermograms
+## Project Structure
+materials_analysis/
+│
+├── io/               # data loaders
+│   ├── read_tensile.py
+│   ├── read_dma.py
+│   ├── read_tga.py
+│   └── read_dsc.py
+│
+├── analysis/         # computation logic
+│   ├── tensile.py
+│   ├── dma.py
+│   ├── tga.py
+│   └── dsc.py
+│
+├── plots/            # plotting utilities
+│   ├── tensile_plot.py
+│   ├── dma_plot.py
+│   ├── tga_plot.py
+│   ├── dsc_plot.py
+│   └── style.py
+│
+├── examples/         # demo scripts and example datasets
+├── tests/            # unit tests
+└── README.md
