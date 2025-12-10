@@ -1,61 +1,104 @@
-# MechTherm Analytics
-A Comprehensive GUI Application for Automated Materials Characterization Data Analysis
+# MechTherm Analytics  
+*A Comprehensive GUI Application for Automated Materials Characterization Data Analysis*
 
-## Overview
-MechTherm Analytics is a user-friendly desktop application designed for polymer and materials researchers. It provides automated analysis and visualization of common characterization techniques without requiring programming knowledge or complex software training.
+---
 
-Key Philosophy: Import Data → One-Click Analysis → Publication-Ready Results
+## 🚀 Overview
 
-The application currently supports:
-- Tensile Testing - Stress-strain analysis with statistical processing
-- Thermogravimetric Analysis (TGA) - Thermal decomposition characterization  
-- Differential Scanning Calorimetry (DSC) - Glass transition temperature detection
-- Dynamic Mechanical Analysis (DMA) - Coming soon
+**MechTherm Analytics** is a standalone, user-friendly desktop application designed for materials and polymer researchers.  
+It automates the analysis and visualization of common characterization techniques—no coding, no Excel scripting, no specialized software required.
 
-## Features
+**Philosophy:**  
+➡️ *Import Data → One Click → Publication-Ready Results*
 
-### Intuitive GUI Interface
-- Clean tabbed interface for different analysis types
-- Real-time status feedback and progress tracking
-- No programming knowledge required
-- Drag-and-drop file loading support
+Currently supported modules:
 
-### Tensile Testing Analysis
-- File Support: Instron .txt files, batch folder processing
-- Automated Calculations:
-  - Young's modulus (adaptive strain range detection)
-  - Ultimate tensile strength (UTS)
-  - Strain at break
-  - Toughness (area under curve)
-- Statistical Analysis: Mean ± standard deviation for multiple trials
-- Output: Publication-ready stress-strain plots and summary tables
+- **Tensile Testing** – Stress–strain processing with statistics  
+- **Thermogravimetric Analysis (TGA)** – Decomposition profiling  
+- **Differential Scanning Calorimetry (DSC)** – Tg detection  
+- **Dynamic Mechanical Analysis (DMA)** – *Coming soon*
 
-### TGA Analysis
-- File Support: CSV format with temperature/weight data
-- Automated Detection:
-  - T5 (5% weight loss temperature)
-  - T50 (50% weight loss temperature)  
-  - Tmax (maximum decomposition rate temperature)
-  - Residue at 600°C
-- Visualization: Weight loss curves and derivative (DTG) plots
-- Multi-sample comparison with overlay plotting
+---
 
-### DSC Analysis
-- File Support: Multi-sheet Excel files (.xls/.xlsx)
-- Smart Data Selection: Automatically identifies second heating cycle
-- Tg Detection Methods:
-  - Midpoint method (primary)
-  - Inflection point method
-  - Onset method
-- Temperature Range: Optimized for polymer glass transitions (-60°C to +40°C)
-- Output: Heat flow curves with Tg markers and analysis tables
+## ✨ Features
 
-### Export & Reporting
-- Excel Export: Comprehensive results with multiple worksheets
-- Publication Tables: Formatted mean ± std tables ready for papers
-- High-Quality Plots: Professional formatting with customizable legends
-- Batch Processing: Analyze multiple samples simultaneously
+### 🖥️ Intuitive Graphical Interface
+- Clean tab-based layout (Tensile, TGA, DSC, Results)
+- Drag-and-drop file loading
+- Real-time status and error logging
+- Designed for non-programmers
 
+---
+
+## 🔧 Tensile Testing Module
+
+**Supported Files:** Instron `.txt` files and `.csv` formats
+
+### Automated Calculations
+- Young’s modulus with adaptive linear-range detection  
+- Ultimate tensile strength (UTS)  
+- Strain at break  
+- Toughness (area under the stress–strain curve)
+
+### Statistical Tools
+- Multi-trial mean ± standard deviation  
+- Coefficient of variation  
+- Ready-to-publish summary tables
+
+### Visualization
+- Overlayed stress–strain curves  
+- Professional journal-style plots  
+- Interactive viewing inside the GUI
+
+---
+
+## 🔥 Thermogravimetric Analysis (TGA)
+
+**Supported Files:** `.csv` with *Time*, *Unsubtracted Weight*, *Temperature*
+
+### Extracted Parameters
+- **T5** – 5% weight-loss temperature  
+- **T50** – 50% weight-loss temperature  
+- **Tmax** – Maximum decomposition rate  
+- **Residue at 600°C**
+
+### Visual Outputs
+- Weight (%) vs temperature curves  
+- DTG (derivative) curves  
+- Multi-sample overlays
+
+---
+
+## ❄️ Differential Scanning Calorimetry (DSC)
+
+**Supported Files:** `.xls` and `.xlsx` multi-sheet files
+
+### Smart Data Selection
+Automatically identifies the **second heating cycle (-90°C to 200°C)**.
+
+### Tg Detection Methods
+- **Midpoint method** *(primary)*  
+- **Inflection point** *(derivative peak)*  
+- **Onset method** *(baseline intersection)*  
+
+### Outputs
+- Heat flow curves  
+- Tg markers  
+- Summary tables for all samples  
+
+---
+## 📤 Export & Reporting
+
+- **Excel Export**  
+  - Statistical summaries  
+  - Mean ± standard deviation tables  
+  - Raw processed data  
+- **Plot Export**
+  - Publication-ready PNG/SVG plots
+- **Batch Processing**
+  - Load and analyze entire folders at once  
+
+---
 ## Installation & Usage
 
 ### Requirements
