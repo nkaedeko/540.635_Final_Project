@@ -1,75 +1,108 @@
 # MechTherm Analytics
-A Python Toolkit for Automated Tensile, DMA, TGA, and DSC Data Analysis
-
----
+A Comprehensive GUI Application for Automated Materials Characterization Data Analysis
 
 ## Overview
-This toolkit provides a unified Python workflow for analyzing materials characterization data commonly used in polymer and soft-materials research. It automates calculations normally performed manually in Excel and generates clean, publication-style plots.
+MechTherm Analytics is a user-friendly desktop application designed for polymer and materials researchers. It provides automated analysis and visualization of common characterization techniques without requiring programming knowledge or complex software training.
 
-The package currently supports:
-- Tensile testing (Instron)
-- Dynamic Mechanical Analysis (DMA)
-- Thermogravimetric Analysis (TGA)
-- Differential Scanning Calorimetry (DSC)
+Key Philosophy: Import Data → One-Click Analysis → Publication-Ready Results
 
----
+The application currently supports:
+- Tensile Testing - Stress-strain analysis with statistical processing
+- Thermogravimetric Analysis (TGA) - Thermal decomposition characterization  
+- Differential Scanning Calorimetry (DSC) - Glass transition temperature detection
+- Dynamic Mechanical Analysis (DMA) - Coming soon
 
 ## Features
 
-### Tensile Analysis
-- Reads raw Instron `.txt` files  
-- Computes:
-  - Young’s modulus  
-  - Ultimate tensile strength (UTS)  
-  - Strain at break  
-  - Toughness  
-- Generates stress–strain curves
+### Intuitive GUI Interface
+- Clean tabbed interface for different analysis types
+- Real-time status feedback and progress tracking
+- No programming knowledge required
+- Drag-and-drop file loading support
 
-### DMA Analysis
-- Imports E′, E″, and tan δ vs. temperature data  
-- Extracts:
-  - Glass transition temperature (Tg) from E′ onset and tan δ peak  
-  - Storage modulus at chosen temperatures  
-- Generates E′–temperature and tan δ–temperature plots
+### Tensile Testing Analysis
+- File Support: Instron .txt files, batch folder processing
+- Automated Calculations:
+  - Young's modulus (adaptive strain range detection)
+  - Ultimate tensile strength (UTS)
+  - Strain at break
+  - Toughness (area under curve)
+- Statistical Analysis: Mean ± standard deviation for multiple trials
+- Output: Publication-ready stress-strain plots and summary tables
 
 ### TGA Analysis
-- Converts mass to percent weight  
-- Computes derivative weight loss (DTG)  
-- Extracts:
-  - T5  
-  - T50  
-  - Tmax  
-- Generates TGA and DTG curves
+- File Support: CSV format with temperature/weight data
+- Automated Detection:
+  - T5 (5% weight loss temperature)
+  - T50 (50% weight loss temperature)  
+  - Tmax (maximum decomposition rate temperature)
+  - Residue at 600°C
+- Visualization: Weight loss curves and derivative (DTG) plots
+- Multi-sample comparison with overlay plotting
 
 ### DSC Analysis
-- Smooths and baseline-corrects heat-flow data  
-- Identifies Tg (onset or midpoint)  
-- Generates DSC thermograms
+- File Support: Multi-sheet Excel files (.xls/.xlsx)
+- Smart Data Selection: Automatically identifies second heating cycle
+- Tg Detection Methods:
+  - Midpoint method (primary)
+  - Inflection point method
+  - Onset method
+- Temperature Range: Optimized for polymer glass transitions (-60°C to +40°C)
+- Output: Heat flow curves with Tg markers and analysis tables
 
----
+### Export & Reporting
+- Excel Export: Comprehensive results with multiple worksheets
+- Publication Tables: Formatted mean ± std tables ready for papers
+- High-Quality Plots: Professional formatting with customizable legends
+- Batch Processing: Analyze multiple samples simultaneously
 
-## Project Structure
-materials_analysis/
-│
-├── io/               # data loaders
-│   ├── read_tensile.py
-│   ├── read_dma.py
-│   ├── read_tga.py
-│   └── read_dsc.py
-│
-├── analysis/         # computation logic
-│   ├── tensile.py
-│   ├── dma.py
-│   ├── tga.py
-│   └── dsc.py
-│
-├── plots/            # plotting utilities
-│   ├── tensile_plot.py
-│   ├── dma_plot.py
-│   ├── tga_plot.py
-│   ├── dsc_plot.py
-│   └── style.py
-│
-├── examples/         # demo scripts and example datasets
-├── tests/            # unit tests
-└── README.md
+## Installation & Usage
+
+### Requirements
+pip install pandas numpy matplotlib scipy openpyxl xlrd tkinter
+
+### Quick Start
+1. Run the application:
+   python materials_analyzer_app.py
+
+2. Load your data:
+   - Select appropriate analysis tab (Tensile/TGA/DSC)
+   - Use "Load Files" or "Load from Folder"
+   - Set analysis parameters if needed
+
+3. Analyze & Export:
+   - Click "Analyze Data" for automated processing
+   - Generate plots with "Generate Plots"
+   - Export results to Excel format
+
+### Supported File Formats
+- Tensile: .txt files (Instron format)
+- TGA: .csv files with Time, Weight, Temperature columns
+- DSC: .xls/.xlsx files with multiple heating cycles
+
+## Application Architecture
+
+GUI Interface (Tkinter)
+├── Home Tab - Welcome & quick start
+├── Tensile Tab - Stress-strain analysis
+├── TGA Tab - Thermal decomposition
+├── DSC Tab - Glass transition detection  
+└── Results Tab - Formatted output display
+
+Core Modules:
+├── File I/O - Multi-format data readers
+├── Analysis Engine - Automated calculations
+├── Visualization - Publication-ready plotting
+└── Export System - Excel & table generation
+
+## Development Team
+Developed for materials science research groups requiring efficient, standardized analysis workflows for polymer characterization.
+
+Target Users: Graduate students, postdocs, and faculty working with polymer materials who need reliable, consistent analysis without extensive software training.
+
+## Future Enhancements
+- Dynamic Mechanical Analysis (DMA) module
+- Advanced statistical analysis options
+- Custom plot styling and themes
+- Automated report generation
+- Database integration for sample tracking
