@@ -9,7 +9,7 @@
 It automates the analysis and visualization of common characterization techniques—no coding, no Excel scripting, no specialized software required.
 
 **Philosophy:**  
-➡️ *Import Data → One Click → Publication-Ready Results*
+ *Import Data → One Click → Publication-Ready Results*
 
 Currently supported modules:
 
