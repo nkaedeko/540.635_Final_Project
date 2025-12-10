@@ -3,7 +3,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 **MechTherm Analytics** is a standalone, user-friendly desktop application designed for materials and polymer researchers.  
 It automates the analysis and visualization of common characterization techniques—no coding, no Excel scripting, no specialized software required.
@@ -20,9 +20,9 @@ Currently supported modules:
 
 ---
 
-## ✨ Features
+## Features
 
-### 🖥️ Intuitive Graphical Interface
+### Intuitive Graphical Interface
 - Clean tab-based layout (Tensile, TGA, DSC, Results)
 - Drag-and-drop file loading
 - Real-time status and error logging
@@ -30,7 +30,7 @@ Currently supported modules:
 
 ---
 
-## 🔧 Tensile Testing Module
+## Tensile Testing Module
 
 **Supported Files:** Instron `.txt` files and `.csv` formats
 
@@ -52,7 +52,7 @@ Currently supported modules:
 
 ---
 
-## 🔥 Thermogravimetric Analysis (TGA)
+## Thermogravimetric Analysis (TGA)
 
 **Supported Files:** `.csv` with *Time*, *Unsubtracted Weight*, *Temperature*
 
@@ -69,7 +69,7 @@ Currently supported modules:
 
 ---
 
-## ❄️ Differential Scanning Calorimetry (DSC)
+## Differential Scanning Calorimetry (DSC)
 
 **Supported Files:** `.xls` and `.xlsx` multi-sheet files
 
@@ -87,7 +87,7 @@ Automatically identifies the **second heating cycle (-90°C to 200°C)**.
 - Summary tables for all samples  
 
 ---
-## 📤 Export & Reporting
+## Export & Reporting
 
 - **Excel Export**  
   - Statistical summaries  
